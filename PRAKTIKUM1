@@ -1,0 +1,13 @@
+data_pras = read.delim(pipe("pbpaste"))
+View(data_pras)
+
+data_pras_csv=read.csv("/Users/pras/Documents/TRISAKTI S3/PRAK STATISTIKA/data_rstudio.csv")
+View(data_pras_csv)
+str(data_pras_csv)
+mean(data_pras$Tinggi.Badan)
+
+
+install.packages("xlsx")
+library("xlsx")
+
+data_pras_xlsx=read.xlsx("/Users/pras/Documents/TRISAKTI S3/PRAK STATISTIKA/data_rstudio.xlsx",1)
