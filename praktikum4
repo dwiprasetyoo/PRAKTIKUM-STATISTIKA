@@ -1,0 +1,10 @@
+pras=read.delim(pipe("pbpaste"))
+View(pras)
+
+t.test(pras$volume, conf.level = 0.9)
+
+t.test(pras$volume, conf.level = 0.95)
+
+data = read.delim(pipe("pbpaste"))
+View(data)
+t.test(data$volume, conf.level = 0.5)
