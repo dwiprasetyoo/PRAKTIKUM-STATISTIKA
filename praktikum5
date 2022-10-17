@@ -1,0 +1,11 @@
+pras=read.delim(pipe("pbpaste"))
+View(pras)
+str(pras)
+mean(pras$Volume)
+t.test(pras$Volume, mu=10)
+
+uangjajan=read.delim(pipe("pbpaste"))
+View(uangjajan)
+str(uangjajan)
+mean(uangjajan$Uang.Jajan)
+t.test(uangjajan$Uang.Jajan, mu=14500)
