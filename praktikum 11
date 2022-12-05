@@ -1,0 +1,18 @@
+df_pras = read.delim(pipe("pbpaste"))
+View(df_pras)
+
+model<-aov(korosi~metode, data=df_pras)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+df_pras=PlantGrowth
+View(df_pras)
+
+model <- aov(weight~group, data=df_pras)
+summary(model)
+
+tukey.test<-TukeyHSD(model)
+tukey.test
+
