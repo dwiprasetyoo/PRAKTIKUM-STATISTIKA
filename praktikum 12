@@ -1,0 +1,15 @@
+df_pras=read.delim(pipe("pbpaste"))
+head(df_pras)
+model_reg=lm(df_pras$y~df_pras$x)
+summary(model_reg)
+
+df_pras=read.delim(pipe("pbpaste"))
+df_pras$brick_dummy <- ifelse(df_pras$Brick == "Yes", 1,0)
+df_pras$N_dummy1 <- ifelse(df_pras$Neighborhood =="West", 1,0)
+df_pras$N_dummy2 <- ifelse(df_pras$Neighborhood =="North", 1,0)
+model=lm(df_pras$Price~df_pras$SqFt+df_pras$Bedrooms+df_pras
+         $Bathrooms+df_pras$brick_dummy+df_pras$N_dummy1+df_pras$N_dummy2)
+summary(model)
+
+by(df_pras$Price, df_pras$Neighborhood, mean)
+by(df_pras$Price, df_pras$Brick, mean)
