@@ -1,0 +1,24 @@
+dataku_pras =read.delim(pipe("pbpaste"))
+View(dataku_pras)
+wilcox.test(dataku_pras$Sebelum,dataku_pras$Setelah,paired=TRUE)
+
+
+dataku_pras =read.delim(pipe("pbpaste"))
+View(dataku_pras)
+wilcox.test(dataku_pras$Sebelum,dataku_pras$Sesudah,paired=TRUE)
+
+
+df_pras=read.delim(pipe("pbpaste"))
+# independent 2-group Mann-Whitney U Test
+wilcox.test(df_pras$obat~df_pras$grup)
+# where y is numeric and A is A binary factor
+head(df_pras)
+rank(df_pras$obat)
+
+dataku_pras=read.delim(pipe("pbpaste"))
+View(dataku_pras)
+wilcox.test(dataku_pras$Ganjil,dataku_pras$Genap,paired=TRUE
+
+dataku_pras = read.delim(pipe("pbpaste")) 
+View(dataku_pras)
+wilcox.test(dataku_pras$caffeine,dataku_pras$placebo ,paired=TRUE)
